@@ -4,18 +4,20 @@
   margin: 0 auto;
 }
 
-@media (min-width:320px){
-
 .titulofaq{
   margin: 5%;
 }
 .card-header{
   margin: 0;
 }
+.accordion i{
+  margin-right: 5px;
+}
 
 /**      FOOTER        **/
 .footer{
-  background-color: #f3bff380;
+  background-color: #202428;
+  color: white;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -30,11 +32,11 @@
 }
 .footer a{
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 0.8rem;
 }
 .footer a:hover{
-  color: white;
+  color: red;
 }
 .contacto{
   display: flex;
@@ -78,7 +80,6 @@
     margin: 0 7% 5% 7%;
   }
 
-}
 
 @media (min-width:720px){
 
