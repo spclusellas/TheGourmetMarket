@@ -1,0 +1,330 @@
+body{
+box-sizing: border-box;
+margin: 0 auto;
+padding: 0;
+}
+
+header{
+margin-bottom: 10px;
+padding-top: 10px;
+background-color: white;
+font-family: 'Raleway', sans-serif;
+}
+
+header ul{
+margin-bottom: 0;
+}
+
+header li{
+list-style-type: none;
+display: inline;
+}
+
+a{
+  text-decoration: none;
+}
+
+header a{
+color: black;
+}
+
+.flex-container{
+  display:flex;
+}
+
+.barra{
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.iconos{
+  overflow: hidden;
+  padding: 0;
+  align-self: flex-end;
+  margin-bottom: 0rem;
+}
+
+.iconitos{
+  float: left;
+  margin: 0 6px;
+  font-size: 140%;
+}
+
+
+  .logoheader{
+  width: 180px;
+  }
+
+  .cuerpo{
+  margin-top: 185px;
+  }
+
+.seg-seccion-gnrl{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2% 0;
+}
+.seg-seccion-gnrl article{
+  width: 47%;
+  justify-content: center;
+  margin: 1% auto;
+}
+.imgboton{
+  width: 100%;
+}
+
+.destacados{
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.bottondestacados{
+overflow: hidden;
+height: 200px;
+}
+
+.imgboton{
+height: 100%;
+}
+
+
+.productosmasvendidos{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 5%;
+}
+
+/* Parche para que no se vea la foto fuera del article (tamaño de la foto grande) */
+.productosmasvendidos > article {
+  overflow: hidden;
+  width: 40%;
+  text-align: center;
+  margin-top: 2%;
+}
+.productosmasvendidos img{
+  width: 70%;
+  height: 70%;
+}
+.productosmasvendidos h2{
+  text-align: center;
+  width: 100%;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #343a40;
+  padding: 1%;
+  border-radius: 15%;
+}
+.productosmasvendidos a{
+  color: white;
+  background-color: #343a40;
+  padding: 3%;
+  border-radius: 10%;
+}
+.contendor-prod3{
+  display: none;
+}
+.contendor-prod4{
+  display: none;
+}
+
+
+#Search{
+display: hidden;
+}
+
+.titulofaq{
+  margin: 2% 0 ;
+}
+.card-header{
+  margin: 0;
+}
+
+/**      FOOTER        **/
+.footer{
+  background-color: #202428;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 3%;
+  padding: 2% 0 0 0;
+  }
+.footer ul{
+  list-style-type: none;
+  padding: 0;
+}
+.footer li{
+  padding: 1%;
+}
+.footer a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+}
+.footer a:hover{
+  color: red;
+}
+.contacto{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-block-end: solid 1px grey;
+  border-block-start: solid 1px grey;
+  margin: 5% 0 5% 0;
+}
+.contacto i{
+  margin-right: 2%;
+}
+.ubic{
+  font-size: 0.8rem;
+}
+.sobrenos{
+  text-align: center;
+}
+.redes{
+  text-align: center;
+}
+.redes img{
+  width: 35%;
+  margin-bottom: 5%;
+  margin: 0 auto 3%;
+}
+.titfooter{
+  text-align: center;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding-top: 3%;
+  }
+.redesa{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  }
+  .redesa a{
+    font-size: 250%;
+  }
+  .newsletter{
+    margin: 0 7% 5% 7%;
+  }
+
+.registro{
+  margin-top:190px;
+}
+
+@media (min-width:720px){
+
+  .registro{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10%;
+  }
+
+  .login{
+    width: 50%;
+    padding: 30px;
+  }
+
+  .register{
+    border-top-style: none;
+    border-left-style: solid;
+    border-color: grey;
+    width: 50%;
+    padding: 30px;
+  }
+
+  .seg-seccion-gnrl article{
+    width: 24%;
+  }
+
+  .productosmasvendidos article{
+    width: 20%;
+  }
+  .contendor-prod3{
+    display: block;
+  }
+  .contendor-prod4{
+    display: block;
+  }
+
+
+
+/**      FOOTER        **/
+  .footer{
+    flex-direction: row;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .sobrenos{
+    width: 30%;
+  }
+  .contacto {
+    width: 36%;
+    border-inline-end: solid 1px grey;
+    border-inline-start: solid 1px grey;
+    border-block-end: none;
+    border-block-start: none;
+    margin: 0 auto;
+
+  }
+  .redes{
+    width: 30%;
+  }
+  .redes img{
+    width: 75%;
+  }
+  .titfooter {
+  font-weight: bold;
+  }
+}
+
+
+/* REGISTER Y SIGN IN */
+
+
+.register{
+  border-top-style: none;
+  border-color: grey;
+  /* margin-top: 20px; */
+  text-align: center;
+}
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #1ca9d8;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .button:hover span {
+    padding-right: 25px;
+  }
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
