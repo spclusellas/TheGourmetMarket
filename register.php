@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Mi Cuenta</title>
+    <title>Registro</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,9 +22,7 @@
         <li class="iconitos"><a href="preguntasfrecuentes.html"><i class="fas fa-question fa-1x"></i></a></li>
       </ul>
       </nav>
-      <!-- nav bar con productos y search para large -->
       <nav class="navbar navbar-expand-lg navbar-light navbar-dark bg-dark">
-      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -56,39 +54,46 @@
       </div>
     </nav>
     </header>
+
     <div class="container">
       <section class="registro">
-        <article class="login">
+        <article class="login text-center">
           <h2>Iniciar Sesión</h2>
+          <form method="get" action="signin.html">
+            <button class="button" style="vertical-align:middle"><span>Ya tengo una cuenta</span></button>
+          </form>
+        </article>
+        <article class="register text-center">
+          <h2>REGISTRARME</h2>
           <form>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <input type="email" class="form-control" id="email" placeholder="Email">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Recúerdame</label>
-                <button type="submit" class="btn btn-primary">Log In</button>
+                <input type="password" class="form-control" id="password" placeholder="Password">
               </div>
               <div class="form-group col-md-6">
-                <a href="contraseña">Olvidé mi contraseña</a>
+                <label for="inputPassword4">Confirmar Password</label>
+                <input type="password" class="form-control" id="repassword" placeholder="Password">
               </div>
             </div>
-          </form>
-        </article>
-        <article class="register">
-          <h2>¿Sos nuevo en "The Gourmet Market?"</h2>
-          <form method="get" action="register.html">
-            <button class="button" style="vertical-align:middle"><span>Crear una cuenta </span></button>
+            <div class="form-group">
+              <label for="inputAddress">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Apellido</label>
+              <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+            </div>
+            <button type="submit" class="btn btn-primary">Crear cuenta</button>
           </form>
         </article>
       </section>
-        <!-- footer -->
+
+      <!-- FOOTER -->
       <section class="footer">
 
         <div class="sobrenos">
@@ -128,7 +133,6 @@
         </div>
 
       </section>
-
 
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
