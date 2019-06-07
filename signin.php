@@ -1,3 +1,39 @@
+<?php
+require_once("helpers.php");
+include_once("controladores/funciones.php");
+if($_POST){
+
+  $errores= validarLogin($_POST);
+  if(count($errores)==0){
+    $usuario = buscarEmail($_POST["email"]);
+    if($usuario == null){
+      $errores["email"]="Usuario no existe";
+    }else{
+      if(password_verify($_POST["password"],$usuario["password"])===false){
+        $errores["password"]="Error en los datos verifique";
+      }else{
+        seteoUsuario($usuario,$_POST);
+        if(validarUsuario()){
+          header("location: perfil.php");
+          exit;
+        }else{
+          header("location: signin.php");
+          exit;
+        }
+      }
+
+
+    }
+
+
+
+
+  }
+
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -16,19 +52,26 @@
       <section class="registro">
         <article class="login">
           <h2>Iniciar Sesión</h2>
-          <form>
+          <?php if (isset($errores)) :?>
+            <ul>
+              <?php foreach ($errores as $key => $value):?>
+                <li><?=$value ?></li>
+              <?php endforeach; ?>
+            </ul>
+          <?php endif; ?>
+          <form method="POST" action="" enctype="multipart/form-data">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email">
+                <input type="email" name="email" class="form-control" placeholder="Email" value="<?= isset($errores["email"])? "": persistir("email") ?>">
               </div>
               <div class="form-group col-md-6">
                 <label for="inputPassword4">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password">
+                <input type="password" class="form-control"  placeholder="Password" name="password">
               </div>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Recúerdame</label>
+                <label class="form-check-label" for="exampleCheck1" name="recordar" value="recordar">Recúerdame</label>
                 <button type="submit" class="btn btn-primary">Log In</button>
               </div>
               <div class="form-group col-md-6">

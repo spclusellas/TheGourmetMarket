@@ -5,11 +5,17 @@ require_once("controladores/funciones.php");
 if ($_POST){
   $errores = validar($_POST);
   if (count($errores)== 0){
-    $avatar = armarAvatar($_FILES);
-    $usuario = armarUsuario($_POST,$avatar);
-    guardarUsuario($usuario);
-    header("location: signin.php");
-    exit;
+    $usuario = buscarEmail($_POST["email"]);
+    if($usuario["email"] == $_POST["email"]){
+      $errores["email"]="El usuario ya se encuentra en nuestra base de datos";
+
+    }else{
+      $avatar = armarAvatar($_FILES);
+      $usuario = armarUsuario($_POST,$avatar);
+      guardarUsuario($usuario);
+      header("location: signin.php");
+      exit;
+    }
   }
 }
 
@@ -34,7 +40,7 @@ if ($_POST){
       <section class="registro">
         <article class="login text-center">
           <h2>Iniciar Sesión</h2>
-          <form method="get" action="signin.php">
+          <form method="GET" action="signin.php">
             <button class="button" style="vertical-align:middle"><span>Ya tengo una cuenta</span></button>
           </form>
         </article>

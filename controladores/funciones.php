@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once("helpers.php");
 
 function validar($datos){
@@ -48,7 +49,6 @@ function validar($datos){
           $errores["apellido"]="El campo apellido no puede estar vacio";
          }
      }
-
      if(isset($_FILES)){
        if($_FILES["avatar"]["error"]!=0){
           $errores["avatar"]="No se recibió ninguna imagen";
@@ -60,8 +60,36 @@ function validar($datos){
          }
      }
 
+
+
      return $errores;
 }
+function validarLogin($datos){
+
+    $errores = [];
+
+    if (isset($datos["email"])){
+      $email = trim($datos["email"]);
+      if (empty($email)){
+        $errores["email"] = "El email no puede estar vacío";
+      }
+      if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
+        $errores["email"]="El email no es válido";
+      }
+    }
+
+    return $errores;
+}
+
+    if(isset($datos["password"])){
+      $password = trim($datos["password"]);
+      if(empty($password)){
+        $errores["password"] = "El password no puede estar vacio";
+        }
+      elseif(strlen($password)<6){
+        $errores["password"]="El password debe tener mínimo 6 cacteres";
+        }
+    }
 
 function armarAvatar($imagen){
   $nombre = $imagen["avatar"]["name"];
@@ -90,4 +118,57 @@ function armarUsuario($datos,$avatar){
 function guardarUsuario($usuario){
     $json = json_encode($usuario);
     file_put_contents("usuarios.json",$json.PHP_EOL,FILE_APPEND);
+}
+
+function buscarEmail($email){
+    $usuarios = abrirBaseDatos();
+
+    foreach ($usuarios as  $usuario) {
+        if($email === $usuario["email"]){
+            return $usuario;
+        }
+    }
+    return null;
+}
+
+function buscarEmailDuplicado($email){
+    $usuarios = abrirBaseDatos();
+
+    foreach ($usuarios as  $usuario) {
+        if($email === $usuario["email"]){
+            return $usuario;
+        }
+    }
+    return null;
+}
+function abrirBaseDatos(){
+    $baseDatosJson= file_get_contents("usuarios.json");
+    $baseDatosJson = explode(PHP_EOL,$baseDatosJson);
+    array_pop($baseDatosJson);
+    foreach ($baseDatosJson as  $usuarios) {
+        $arrayUsuarios[]= json_decode($usuarios,true);
+    }
+    return $arrayUsuarios;
+}
+function seteoUsuario($user,$dato){
+    $_SESSION["nombre"]=$user["nombre"];
+    $_SESSION["email"] = $user["email"];
+    $_SESSION["avatar"]= $user["avatar"];
+    if(isset($dato["recordar"]) ){
+        setcookie("email",$dato["email"],time()+3600);
+        setcookie("password",$dato["password"],time()+3600);
+
+    }
+}
+
+function validarUsuario(){
+    if($_SESSION["email"]){
+        return true;
+    }elseif ($_COOKIE["email"]) {
+        $_SESSION["email"]=$_COOKIE["email"];
+        return true;
+    }else{
+        return false;
+    }
+
 }
