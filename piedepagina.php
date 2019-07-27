@@ -30,7 +30,7 @@
           <li> <a href="http://www.twitter.com"><i class="fab fa-twitter-square"></i></a></li>
         </ul>
         <a href="#">
-        <img src="images/logo.png" alt="logo">
+        <img src="images/logo_blanco.png" alt="logo">
         </a>
      </div>
 

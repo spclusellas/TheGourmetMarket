@@ -1,4 +1,5 @@
 <header class="fixed-top">
+  
   <nav class="flex-container barra">
     <!-- <i class="fas fa-bars fa-1x"></i> -->
     <img class="logoheader mx-auto" src="images/logo.png" alt="The Market">
