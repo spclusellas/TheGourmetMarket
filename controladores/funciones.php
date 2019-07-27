@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require_once("helpers.php");
 
 function validar($datos){
@@ -96,7 +96,7 @@ function armarAvatar($imagen){
   $ext = pathinfo($nombre,PATHINFO_EXTENSION);
   $archivoOrigen = $imagen["avatar"]["tmp_name"];
   $archivoDestino = dirname(__DIR__);
-  $archivoDestino = $archivoDestino."/fotosDePerfil/";
+  $archivoDestino = $archivoDestino."/images/";
   $avatar = uniqid();
   $archivoDestino = $archivoDestino.$avatar;
   $archivoDestino = $archivoDestino.".".$ext;

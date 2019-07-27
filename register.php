@@ -1,7 +1,36 @@
 <?php
-require_once("helpers.php");
-require_once("controladores/funciones.php");
+require_once("autoload.php");
+//require_once("helpers.php");
+//require_once("controladores/funciones.php");
 
+
+if ($_POST){
+  //Esta variable es quien controla si se desea guardar en archivo JSON o en MYSQL
+  $tipoConexion = "MYSQL";
+  // Si la función retorn false, significa que se va a guardar los datos en JSON, de lo contrario se guardará los datos en MYSQL
+
+  $usuario = new Usuario($_POST["email"],$_POST["password"],$_POST["repassword"],$_POST["nombre"],$_POST["apellido"],$_FILES );
+  //Aquí verifico si los datos registrados por el usuario pasan las validaciones
+  $errores = $validar->validacionUsuario($usuario, $_POST["repassword"]);
+  //De no existir errores entonces:
+  if(count($errores)==0){
+    //Busco a ver si el usuario existe o no en la base de datos
+    $usuarioEncontrado = BaseMYSQL::buscarPorEmail($usuario->getEmail(),$pdo,'users');
+    if($usuarioEncontrado != false){
+      $errores["email"]= "Usuario ya Registrado";
+    }else{
+      //Aquí guardo en el servidor la foto que el usuario seleccionó
+      $avatar = $registro->armarAvatar($usuario->getAvatar());
+      //Aquí procedo a guardar los datos del usuario en la base de datos, ,aquí le paso el objeto PDO, el objeto usuario, la tabla donde se va a guardar los datos y el nombre del archivo de la imagen del usuario.
+      BaseMYSQL::guardarUsuario($pdo,$usuario,'users',$avatar);
+      //Aquí redirecciono el usuario al login
+      redirect ("signin.php");
+    }
+  }
+
+}
+
+/*
 if ($_POST){
   $errores = validar($_POST);
   if (count($errores)== 0){
@@ -18,7 +47,7 @@ if ($_POST){
     }
   }
 }
-
+*/
  ?>
 
 

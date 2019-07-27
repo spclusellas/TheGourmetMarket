@@ -1,7 +1,8 @@
 <?php
-include_once("controladores/funciones.php");
+require_once("autoload.php");
+//include_once("controladores/funciones.php");
 if(!isset($_SESSION["email"])) {
-    header("location:register.php");
+    redirect("register.php");
     exit;
 }
 ?>
@@ -21,13 +22,13 @@ if(!isset($_SESSION["email"])) {
   <div class="container">
     <section class="row  text-center ">
       <article class="col-12  " >
-      <h1>Bienvenido: <?=$_SESSION["nombre"];?> </h1>
+      <h1>Bienvenido: <?=$_SESSION["name"];?> </h1>
       <p>
-      <img src="fotosDePerfil/<?=$_SESSION["avatar"];?>" alt="Avatar" >
+      <img src="images/<?=$_SESSION["avatar"];?>" alt="Avatar" >
       </p>
       <a href="logout.php">Cerrar Sesión</a>
       </article>
-      
+
     </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
