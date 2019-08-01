@@ -1,6 +1,5 @@
 <!--Seccion Footer -->
-<section class="footer">
-
+<footer>
   <div class="sobrenos">
     <h3 class="titfooter">Sobre Nosotros</h3>
     <ul>
@@ -33,7 +32,4 @@
         <img src="images/logo_blanco.png" alt="logo">
         </a>
      </div>
-
-  </div>
-
-</section>
+</footer>

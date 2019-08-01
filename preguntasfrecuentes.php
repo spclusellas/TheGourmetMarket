@@ -14,8 +14,7 @@
 
     <div class="container cuerpo">
 
-
-      <h2 class="titulofaq">Preguntas Frecuentes</h2>
+      <img src="images/faq.jpg" class="col-12 my-3" alt="">
 
         <div class="preguntasfrec">
 
@@ -24,7 +23,7 @@
           <!-- Preguntas de COMO COMPRAR -->
             <div class="accordion" id="accordionExample">
               <div class="card">
-                <div class="card-header" id="headingOne">
+                <div class="card-header m-0" id="headingOne">
                   <h2 class="mb-0">
                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       <i class="fas fa-question-circle"></i>
@@ -39,7 +38,7 @@
                       </div>
                     </div>
                     <div class="card">
-                      <div class="card-header" id="headingTwo">
+                      <div class="card-header m-0" id="headingTwo">
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             <i class="fas fa-question-circle"></i>
@@ -54,7 +53,7 @@
                       </div>
                     </div>
                     <div class="card">
-                      <div class="card-header" id="headingThree">
+                      <div class="card-header m-0" id="headingThree">
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                             <i class="fas fa-question-circle"></i>
@@ -78,7 +77,7 @@
             <!-- Preguntas de PAGO -->
             <div class="accordion" id="accordionExample">
               <div class="card">
-                <div class="card-header" id="headingFour">
+                <div class="card-header m-0" id="headingFour">
                   <h2 class="mb-0">
                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                     <i class="fas fa-wallet"></i>
@@ -93,7 +92,7 @@
                       </div>
                     </div>
                     <div class="card">
-                      <div class="card-header" id="headingFive">
+                      <div class="card-header m-0" id="headingFive">
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                             <i class="fas fa-wallet"></i>
@@ -108,7 +107,7 @@
                       </div>
                     </div>
                     <div class="card">
-                      <div class="card-header" id="headingSix">
+                      <div class="card-header m-0" id="headingSix">
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                             <i class="fas fa-wallet"></i>
@@ -130,7 +129,7 @@
             <!-- Preguntas de DELIVERY -->
             <div class="accordion" id="accordionExample">
               <div class="card">
-                <div class="card-header" id="headingSeven">
+                <div class="card-header m-0" id="headingSeven">
                   <h2 class="mb-0">
                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
                       <i class="fas fa-truck-loading"></i>
@@ -145,7 +144,7 @@
                       </div>
                     </div>
                     <div class="card">
-                      <div class="card-header" id="headingEight">
+                      <div class="card-header m-0" id="headingEight">
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
                             <i class="fas fa-truck-loading"></i>
@@ -160,7 +159,7 @@
                       </div>
                     </div>
                     <div class="card">
-                      <div class="card-header" id="headingNine">
+                      <div class="card-header m-0" id="headingNine">
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
                             <i class="fas fa-truck-loading"></i>
@@ -185,7 +184,7 @@
             <!-- Preguntas de DEVOLUCION -->
             <div class="accordion" id="accordionExample">
               <div class="card">
-                <div class="card-header" id="headingTen">
+                <div class="card-header m-0" id="headingTen">
                   <h2 class="mb-0">
                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
                       <i class="fas fa-exchange-alt"></i>
@@ -200,7 +199,7 @@
                       </div>
                     </div>
                     <div class="card">
-                      <div class="card-header" id="headingEleven">
+                      <div class="card-header m-0" id="headingEleven">
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
                             <i class="fas fa-exchange-alt"></i>
@@ -215,7 +214,7 @@
                       </div>
                     </div>
                     <div class="card">
-                      <div class="card-header" id="headingTwelve">
+                      <div class="card-header m-0" id="headingTwelve">
                         <h2 class="mb-0">
                           <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
                             <i class="fas fa-exchange-alt"></i>

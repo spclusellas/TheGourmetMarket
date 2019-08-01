@@ -1,5 +1,5 @@
 <?php
-class $PreguntasFrecuentes{
+class PreguntasFrecuentes{
     private $pregunta;
     private $respuesta;
 
@@ -25,3 +25,4 @@ class $PreguntasFrecuentes{
 
         return $this;
     }
+}
