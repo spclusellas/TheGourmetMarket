@@ -14,7 +14,7 @@ require_once("clases/Query.php");
 $host = "localhost";
 $bd = "thegourmetmarket";
 $usuario = "root";
-$password = "root";
+$password = "";
 $puerto = "3306";
 $charset = "utf8mb4";
 //Ojo: Para los que trabajan con MAC: deben colocar el puerto: 8889
